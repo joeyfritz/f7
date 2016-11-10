@@ -1,13 +1,29 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" <?php language_attributes(); ?>>
   <head>
-    <meta charset="utf-8">
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/app.css">
   </head>
-  <body>
+  <body <?php body_class('antialiased'); ?>>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <h1>
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+            </h1>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  <div class="container">
+    <div class="row">
+      
+    </div>
+  </div>
     <div class="row">
       <div class="large-12 columns">
         <h1>Welcome to Foundation</h1>
@@ -159,6 +175,9 @@
         </div>
       </div>
     </div>
+    <footer>
+      
+    </footer>
 
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/jquery/dist/jquery.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/what-input/what-input.js"></script>
